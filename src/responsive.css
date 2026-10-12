@@ -1,0 +1,314 @@
+/* Ajustes de leitura e das tabelas para telas menores. */
+
+:root {
+  --surface-column: #f6f7f8;
+}
+
+body {
+  font-size: 16px;
+}
+
+.topbar nav a {
+  font-size: 13px;
+}
+
+.hero-description {
+  font-size: 15px;
+}
+
+.section-intro {
+  font-size: 13px;
+}
+
+.pronoun-tables {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+}
+
+.pronoun-tables .table-wrap {
+  min-width: 0;
+}
+
+.pronoun-tables table {
+  width: 100%;
+  min-width: 0;
+  table-layout: fixed;
+}
+
+.pronoun-tables caption {
+  padding: 13px 14px 9px;
+  background: var(--surface);
+  color: var(--blue-dark);
+  font-family: Manrope, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.pronoun-tables th {
+  font-size: 10px;
+}
+
+.pronoun-tables td {
+  padding: 12px 10px;
+  font-size: 12px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.pronoun-table th,
+.pronoun-table td {
+  text-align: center;
+}
+
+.pronoun-table td:first-child {
+  text-align: left;
+}
+
+.examples-table .example-cell {
+  font-size: 13px;
+}
+
+.note {
+  font-size: 12px;
+}
+
+.rule-card > p {
+  font-size: 11px;
+}
+
+.rule-example {
+  font-size: 14px;
+}
+
+.rule-example small {
+  font-size: 11px;
+}
+
+.forms-table td,
+.forms-table th {
+  font-size: 11px;
+}
+
+.form-icon {
+  display: inline-grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border-radius: 50%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-positive {
+  background: var(--blue-soft);
+  color: var(--blue-dark);
+}
+
+.form-negative {
+  background: var(--red-pale);
+  color: var(--red);
+}
+
+.form-question {
+  background: var(--blue-pale);
+  color: var(--blue);
+}
+
+.footer-main {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-brand {
+  justify-self: start;
+}
+
+.footer-tagline {
+  justify-self: center;
+  margin: 0;
+}
+
+footer {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.footer-credit {
+  width: 100%;
+  margin-top: 0;
+  color: var(--text-faint);
+  font-size: 10px;
+  text-align: center;
+}
+
+.footer-motto {
+  justify-self: end;
+  color: var(--text-faint);
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.7px;
+}
+
+.footer-credit a {
+  color: var(--blue-dark);
+  text-decoration: none;
+}
+
+.footer-credit a:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.forms-table tbody td:nth-child(even) {
+  background: var(--surface-column);
+}
+
+.phrase-banner p:last-child {
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  .footer-main {
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: 10px;
+  }
+
+  .footer-brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .footer-motto {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .footer-tagline {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: auto;
+  }
+
+  footer {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .pronoun-tables {
+    gap: 12px;
+  }
+
+  .pronoun-tables td {
+    padding: 11px 8px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 680px) {
+  .table-wrap {
+    overflow-x: hidden;
+  }
+
+  .table-wrap table,
+  .forms-table {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  .forms-table th,
+  .forms-table td {
+    padding: 9px 5px;
+    font-size: 11px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .forms-table th:first-child,
+  .forms-table td:first-child {
+    width: 31%;
+  }
+
+  .form-icon {
+    width: 19px;
+    height: 19px;
+    font-size: 12px;
+  }
+
+  .pronoun-tables {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .pronoun-tables td {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .pronoun-tables th {
+    font-size: 11px;
+  }
+
+  .pronoun-tables caption {
+    font-size: 15px;
+  }
+
+  .topbar nav a {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 540px) {
+  .footer-main {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 10px;
+  }
+
+  .footer-brand,
+  .footer-tagline,
+  .footer-motto {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: center;
+  }
+
+  .footer-tagline {
+    width: auto;
+  }
+
+  .footer-motto {
+    width: auto;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .section-intro {
+    font-size: 13px;
+  }
+
+  .rule-card > p {
+    font-size: 12px;
+  }
+
+  .forms-table td,
+  .forms-table th {
+    font-size: 11px;
+  }
+
+  footer p {
+    font-size: 11px;
+  }
+}

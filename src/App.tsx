@@ -1,3 +1,5 @@
+import packageJson from '../package.json'
+
 const pronouns = [
   { english: 'I', portuguese: 'eu', verb: 'am', example: 'I am ready.', translation: 'Eu estou pronto(a).' },
   { english: 'You', portuguese: 'você / vocês', verb: 'are', example: 'You are here.', translation: 'Você está aqui.' },
@@ -54,16 +56,32 @@ function App() {
               <div><p className="eyebrow section-kicker">01 — O COMEÇO DE TUDO</p><h2>Pronomes pessoais</h2></div>
               <p className="section-intro">Os pronomes dizem quem está fazendo ou sendo algo na frase.</p>
             </div>
-            <div className="table-wrap">
-              <table>
-                <thead><tr><th>Em inglês</th><th>Em português</th><th>Verb to be</th><th>Exemplo</th><th>Tradução</th></tr></thead>
-                <tbody>{pronouns.map((item) => (
-                  <tr key={item.english}>
-                    <td><span className="english-word">{item.english}</span></td><td>{item.portuguese}</td>
-                    <td><span className="verb-pill">{item.verb}</span></td><td className="example-cell">{item.example}</td><td className="translation-cell">{item.translation}</td>
-                  </tr>
-                ))}</tbody>
-              </table>
+            <div className="pronoun-tables">
+              <div className="table-wrap">
+                <table className="pronoun-table">
+                  <caption>Pronomes e formas do verbo</caption>
+                  <thead><tr><th>Português</th><th>Inglês</th><th>To be</th></tr></thead>
+                  <tbody>{pronouns.map((item) => (
+                    <tr key={item.english}>
+                      <td>{item.portuguese}</td>
+                      <td><span className="english-word">{item.english}</span></td>
+                      <td><span className="verb-pill">{item.verb}</span></td>
+                    </tr>
+                  ))}</tbody>
+                </table>
+              </div>
+              <div className="table-wrap">
+                <table className="examples-table">
+                  <caption>Exemplos e traduções</caption>
+                  <thead><tr><th>Exemplo</th><th>Tradução</th></tr></thead>
+                  <tbody>{pronouns.map((item) => (
+                    <tr key={item.english}>
+                      <td className="example-cell">{item.example}</td>
+                      <td className="translation-cell">{item.translation}</td>
+                    </tr>
+                  ))}</tbody>
+                </table>
+              </div>
             </div>
             <p className="note"><span className="note-icon">i</span> <span><strong>Dica:</strong> em inglês, o pronome geralmente aparece na frase. <em>Am happy</em> não funciona sozinho: diga <em>I am happy.</em></span></p>
           </section>
@@ -78,13 +96,20 @@ function App() {
               <article className="rule-card rule-negative"><div className="rule-card-head"><span className="rule-symbol">−</span><span>NEGATIVA</span></div><p>Pronome + <strong>am / is / are + not</strong> + complemento</p><div className="rule-example">She <strong>is not</strong> tired.<small>Ela não está cansada.</small></div></article>
               <article className="rule-card rule-question"><div className="rule-card-head"><span className="rule-symbol">?</span><span>PERGUNTA</span></div><p><strong>Am / Is / Are</strong> + pronome + complemento?</p><div className="rule-example"><strong>Are</strong> they at home?<small>Eles estão em casa?</small></div></article>
             </div>
-            <div className="forms-table-wrap"><h3>As formas em um só lugar</h3><div className="table-wrap"><table className="forms-table"><thead><tr><th>Com quem?</th><th>Afirmativa</th><th>Negativa</th><th>Pergunta</th></tr></thead><tbody>{forms.map((form) => <tr key={form.subject}><td>{form.subject}</td><td>{form.affirmative}</td><td>{form.negative}</td><td>{form.question}</td></tr>)}</tbody></table></div></div>
+            <div className="forms-table-wrap"><h3>As formas em um só lugar</h3><div className="table-wrap"><table className="forms-table"><thead><tr><th scope="col">Com quem?</th><th scope="col" aria-label="Afirmativa" title="Afirmativa"><span className="form-icon form-positive" aria-hidden="true">✓</span></th><th scope="col" aria-label="Negativa" title="Negativa"><span className="form-icon form-negative" aria-hidden="true">×</span></th><th scope="col" aria-label="Pergunta" title="Pergunta"><span className="form-icon form-question" aria-hidden="true">?</span></th></tr></thead><tbody>{forms.map((form) => <tr key={form.subject}><td>{form.subject}</td><td>{form.affirmative}</td><td>{form.negative}</td><td>{form.question}</td></tr>)}</tbody></table></div></div>
           </section>
 
           <section className="phrase-banner" id="frases"><div className="phrase-icon">✦</div><div><p className="eyebrow">LEMBRETE RÁPIDO</p><h2>Contrações aparecem o tempo todo.</h2><p><strong>I am → I'm</strong><span className="phrase-separator">·</span><strong>You are → You're</strong><span className="phrase-separator">·</span><strong>She is → She's</strong></p></div><a href="#verb-to-be" aria-label="Voltar para a seção verb to be">↗</a></section>
         </div>
       </main>
-      <footer><a className="brand footer-brand" href="#inicio"><span className="brand-mark">i.</span><span>Inglês em Prática</span></a><p>Aprender leva tempo. Cada frase conta.</p><span>FEITO PARA APRENDER, SEM PRESSA.</span></footer>
+      <footer>
+        <div className="footer-main">
+          <a className="brand footer-brand" href="#inicio"><span className="brand-mark">i.</span><span>Inglês em Prática</span></a>
+          <p className="footer-tagline">Aprender leva tempo. Cada frase conta.</p>
+          <span className="footer-motto">FEITO PARA APRENDER, SEM PRESSA.</span>
+        </div>
+        <div className="footer-credit">Desenvolvido por <a href="https://github.com/pesdesigner" target="_blank" rel="noreferrer">@pesdesigner</a><span aria-hidden="true"> · </span>v{packageJson.version}</div>
+      </footer>
     </div>
   )
 }
