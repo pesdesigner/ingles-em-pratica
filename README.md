@@ -46,3 +46,7 @@ vite.config.ts         Configuração do Vite para o Pages
 
 - O conteúdo é estático e não requer banco de dados ou credenciais.
 - A fonte DM Sans/Manrope é carregada do Google Fonts; sem conexão, o navegador usa fontes alternativas.
+
+## Diretriz de layout
+
+Em telas de celular, evitar rolagem horizontal. Tabelas devem se ajustar à largura disponível, empilhar conteúdo ou usar cabeçalhos compactos.
