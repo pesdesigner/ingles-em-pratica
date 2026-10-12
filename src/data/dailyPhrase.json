@@ -1,0 +1,58 @@
+[
+  {
+    "day": "Domingo",
+    "label": "FRASE DO DIA",
+    "englishLines": ["I am learning", "English"],
+    "translation": "Eu estou aprendendo inglês.",
+    "category": "PRESENTE",
+    "topic": "VERB TO BE"
+  },
+  {
+    "day": "Segunda-feira",
+    "label": "FRASE DO DIA",
+    "englishLines": ["You are", "ready."],
+    "translation": "Você está pronto(a).",
+    "category": "ESTADO",
+    "topic": "VERB TO BE"
+  },
+  {
+    "day": "Terça-feira",
+    "label": "FRASE DO DIA",
+    "englishLines": ["He is my", "friend."],
+    "translation": "Ele é meu amigo.",
+    "category": "PESSOAS",
+    "topic": "VERB TO BE"
+  },
+  {
+    "day": "Quarta-feira",
+    "label": "FRASE DO DIA",
+    "englishLines": ["She is happy", "today."],
+    "translation": "Ela está feliz hoje.",
+    "category": "ESTADO",
+    "topic": "VERB TO BE"
+  },
+  {
+    "day": "Quinta-feira",
+    "label": "FRASE DO DIA",
+    "englishLines": ["We are at", "school."],
+    "translation": "Nós estamos na escola.",
+    "category": "LUGAR",
+    "topic": "VERB TO BE"
+  },
+  {
+    "day": "Sexta-feira",
+    "label": "FRASE DO DIA",
+    "englishLines": ["They are good", "students."],
+    "translation": "Eles são bons alunos.",
+    "category": "PESSOAS",
+    "topic": "VERB TO BE"
+  },
+  {
+    "day": "Sábado",
+    "label": "FRASE DO DIA",
+    "englishLines": ["It is cold", "today."],
+    "translation": "Está frio hoje.",
+    "category": "CLIMA",
+    "topic": "VERB TO BE"
+  }
+]

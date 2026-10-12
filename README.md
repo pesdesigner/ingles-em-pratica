@@ -1,6 +1,6 @@
 # Inglês em Prática
 
-Um guia simples para quem está começando a aprender inglês. A primeira versão apresenta pronomes pessoais e o verbo **to be**, com regras e exemplos traduzidos.
+Um guia simples para quem está começando a aprender inglês. O conteúdo apresenta pronomes pessoais e o verbo **to be**, com regras e exemplos traduzidos. As lições são organizadas em JSON e renderizadas por componentes React tipados.
 
 ## Tecnologias
 
@@ -36,11 +36,22 @@ O workflow compila o site e publica o diretório `dist`. O Vite está configurad
 ## Estrutura
 
 ```text
-src/                   Aplicação React e estilos
+src/
+├── components/        Componentes de interface reutilizáveis, incluindo LessonSection
+├── data/              Conteúdo estático das lições e frases do dia em JSON
+├── types/             Contratos TypeScript dos dados
+├── App.tsx            Composição da página e carregamento das lições
+├── main.tsx           Inicialização React
+├── styles.css         Estilos principais
+└── responsive.css     Ajustes responsivos
 .github/workflows/     Build e publicação no GitHub Pages
 index.html             Documento HTML principal
 vite.config.ts         Configuração do Vite para o Pages
 ```
+
+### Adicionar lições
+
+As lições ficam em `src/data/lessons.json`. Cada lição tem um `id` numérico, uma `order` para definir sua posição, um `slug` usado nos links e uma lista de blocos. Os tipos de bloco disponíveis são grupos de tabelas, grupos de cards e callouts. Os contratos estão em `src/types/lesson.ts`, e `LessonSection` renderiza os blocos conforme o campo `type`.
 
 ## Limitações atuais
 

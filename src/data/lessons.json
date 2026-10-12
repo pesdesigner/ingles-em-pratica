@@ -1,0 +1,133 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "order": 1,
+      "slug": "pronomes",
+      "eyebrow": "01 — O COMEÇO DE TUDO",
+      "title": "Pronomes pessoais",
+      "subtitle": "Os pronomes dizem quem está fazendo ou sendo algo na frase.",
+      "blocks": [
+        {
+          "id": 101,
+          "type": "tableGroup",
+          "tables": [
+            {
+              "id": 1001,
+              "title": "Pronomes e formas do verbo",
+              "columns": [
+                { "key": "portuguese", "label": "Português" },
+                { "key": "english", "label": "Inglês" },
+                { "key": "toBe", "label": "To be" }
+              ],
+              "rows": [
+                { "portuguese": "eu", "english": "I", "toBe": "am" },
+                { "portuguese": "você / vocês", "english": "You", "toBe": "are" },
+                { "portuguese": "ele", "english": "He", "toBe": "is" },
+                { "portuguese": "ela", "english": "She", "toBe": "is" },
+                { "portuguese": "ele / ela (coisas e animais)", "english": "It", "toBe": "is" },
+                { "portuguese": "nós", "english": "We", "toBe": "are" },
+                { "portuguese": "eles / elas", "english": "They", "toBe": "are" }
+              ]
+            },
+            {
+              "id": 1002,
+              "title": "Exemplos e traduções",
+              "columns": [
+                { "key": "example", "label": "Exemplo" },
+                { "key": "translation", "label": "Tradução" }
+              ],
+              "rows": [
+                { "example": "I am ready.", "translation": "Eu estou pronto(a)." },
+                { "example": "You are here.", "translation": "Você está aqui." },
+                { "example": "He is my brother.", "translation": "Ele é meu irmão." },
+                { "example": "She is happy.", "translation": "Ela está feliz." },
+                { "example": "It is cold today.", "translation": "Está frio hoje." },
+                { "example": "We are students.", "translation": "Nós somos estudantes." },
+                { "example": "They are at home.", "translation": "Eles estão em casa." }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 102,
+          "type": "callout",
+          "variant": "tip",
+          "title": "Dica",
+          "text": "Em inglês, o pronome geralmente aparece na frase. Am happy não funciona sozinho: diga I am happy."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "order": 2,
+      "slug": "verb-to-be",
+      "eyebrow": "02 — UM VERBO ESSENCIAL",
+      "title": "O famoso verb to be",
+      "subtitle": "To be significa ser ou estar. A forma muda conforme o pronome.",
+      "blocks": [
+        {
+          "id": 201,
+          "type": "cardGroup",
+          "cards": [
+            {
+              "id": 2011,
+              "variant": "positive",
+              "symbol": "+",
+              "label": "Afirmativa",
+              "formula": "Pronome + am / is / are + complemento",
+              "example": "I am a student.",
+              "translation": "Eu sou estudante."
+            },
+            {
+              "id": 2012,
+              "variant": "negative",
+              "symbol": "−",
+              "label": "Negativa",
+              "formula": "Pronome + am / is / are + not + complemento",
+              "example": "She is not tired.",
+              "translation": "Ela não está cansada."
+            },
+            {
+              "id": 2013,
+              "variant": "question",
+              "symbol": "?",
+              "label": "Pergunta",
+              "formula": "Am / Is / Are + pronome + complemento?",
+              "example": "Are they at home?",
+              "translation": "Eles estão em casa?"
+            }
+          ]
+        },
+        {
+          "id": 202,
+          "type": "table",
+          "title": "As formas em um só lugar",
+          "columns": [
+            { "key": "subject", "label": "Com quem?" },
+            { "key": "affirmative", "label": "Afirmativa", "icon": "✓" },
+            { "key": "negative", "label": "Negativa", "icon": "×" },
+            { "key": "question", "label": "Pergunta", "icon": "?" }
+          ],
+          "rows": [
+            { "subject": "I", "affirmative": "I am", "negative": "I am not", "question": "Am I?" },
+            { "subject": "You / We / They", "affirmative": "You are", "negative": "You are not", "question": "Are you?" },
+            { "subject": "He / She / It", "affirmative": "She is", "negative": "She is not", "question": "Is she?" }
+          ]
+        },
+        {
+          "id": 203,
+          "type": "callout",
+          "variant": "quickReminder",
+          "label": "LEMBRETE RÁPIDO",
+          "title": "Contrações aparecem o tempo todo.",
+          "examples": [
+            { "full": "I am", "contraction": "I'm" },
+            { "full": "You are", "contraction": "You're" },
+            { "full": "She is", "contraction": "She's" }
+          ]
+        }
+      ]
+    }
+  ]
+}
